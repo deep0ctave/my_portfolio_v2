@@ -1,0 +1,76 @@
+<!DOCTYPE html><html lang="en" class="scroll-smooth"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><!-- Fonts — Inter (body) + Playfair Display (headings) --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"><!-- Dark mode: apply .dark before first paint to prevent flash --><script>
+      const theme = localStorage.getItem('theme');
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+    </script><title>From Pokémon to Birding — Avinash Aldhapati</title><meta name="description" content="How a routine fitness walk turned into an unexpected birding hobby."><meta name="author" content="Avinash Aldhapati"><!-- Open Graph --><meta property="og:title" content="From Pokémon to Birding — Avinash Aldhapati"><meta property="og:description" content="How a routine fitness walk turned into an unexpected birding hobby."><meta property="og:type" content="website"><meta property="og:url" content="https://avinashaldhapati.com/blogs/birding_and_pokemon"><!-- Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-MCC0FWPRBG"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MCC0FWPRBG');
+    </script><link rel="stylesheet" href="/_astro/aboutme.Dlif4kv5.css"></head> <body class="min-h-screen flex flex-col"> <!--
+      The entire page lives inside a centered column.
+      max-w-3xl (~48rem / 768px) keeps line lengths readable.
+      Wider sections (like project grids) can break out with their own wrappers.
+    --> <div class="mx-auto w-full max-w-3xl px-6 md:px-8 flex flex-col min-h-screen"> <header class="pt-10 pb-8 md:pt-14 md:pb-10"> <nav class="flex flex-col sm:flex-row justify-between items-start sm:items-baseline gap-4"> <!-- Site name — links to home --> <a href="/" class="font-serif text-2xl md:text-3xl tracking-tight text-text hover:opacity-70 transition-opacity">
+Avinash Aldhapati
+</a> <!-- Right side: nav links + separated toggle --> <div class="flex items-baseline gap-5"> <!-- Navigation links --> <ul class="flex items-baseline gap-6 text-sm text-text-secondary"> <li> <a href="/work" class="link-underline transition-colors hover:text-text">
+work
+</a> </li> <li> <a href="/projects" class="link-underline transition-colors hover:text-text">
+projects
+</a> </li> <li> <a href="/blogs" class="link-underline transition-colors hover:text-text text-text after:w-full">
+writing
+</a> </li> <li> <a href="/aboutme" class="link-underline transition-colors hover:text-text">
+about
+</a> </li> <li> <a href="/contact" class="link-underline transition-colors hover:text-text">
+contact
+</a> </li> </ul> <!-- Vertical separator + dark mode toggle --> <span class="hidden sm:block w-px h-4 bg-border"></span> <button id="theme-toggle" class="text-text-tertiary hover:text-text transition-colors cursor-pointer leading-none" aria-label="Toggle dark mode"> <svg id="theme-icon-sun" class="hidden w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"> <circle cx="12" cy="12" r="5"></circle> <line x1="12" y1="1" x2="12" y2="3"></line> <line x1="12" y1="21" x2="12" y2="23"></line> <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line> <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line> <line x1="1" y1="12" x2="3" y2="12"></line> <line x1="21" y1="12" x2="23" y2="12"></line> <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line> <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line> </svg> <svg id="theme-icon-moon" class="hidden w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"> <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path> </svg> </button> </div> </nav> </header> <!-- Dark mode toggle script --> <script type="module">function o(){const e=document.documentElement.classList.contains("dark"),t=document.getElementById("theme-icon-sun"),n=document.getElementById("theme-icon-moon");t&&n&&(t.classList.toggle("hidden",!e),n.classList.toggle("hidden",e))}o();document.getElementById("theme-toggle")?.addEventListener("click",()=>{const e=document.documentElement.classList.toggle("dark");localStorage.setItem("theme",e?"dark":"light"),o()});</script> <main class="flex-grow py-16 md:py-24">  <article> <!-- Breadcrumb --> <nav class="text-sm text-text-tertiary mb-12" aria-label="Breadcrumb"> <a href="/" class="hover:text-text transition-colors">Home</a> <span class="mx-2">/</span> <a href="/blogs" class="hover:text-text transition-colors">Writing</a> <span class="mx-2">/</span> <span class="text-text-secondary">From Pokémon to Birding</span> </nav> <!-- Title --> <header class="mb-12"> <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight mb-4"> From Pokémon to Birding </h1> <!-- Meta row --> <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-text-tertiary"> <span>November 6, 2025</span> <span>Avinash Aldhapati</span> <div class="flex gap-2"> <span class="text-xs border border-border px-2 py-0.5 rounded-full">Birding</span><span class="text-xs border border-border px-2 py-0.5 rounded-full">Hobby</span><span class="text-xs border border-border px-2 py-0.5 rounded-full">Reflection</span> </div> </div> </header> <!-- Abstract --> <div class="border-l-2 border-text pl-6 mb-16 text-text-secondary leading-relaxed max-w-2xl"> How a routine fitness walk turned into an unexpected obsession with birding, discovery, and paying attention to the world just outside the screen. </div> <!-- Content — the <slot /> receives the page-specific markup --> <div class="prose max-w-none mb-20 text-text-secondary leading-relaxed space-y-6">  <section class="mb-12"> <h2 class="font-serif text-2xl mb-4">The Boring Walk</h2> <p class="mb-4">
+When I first started walking every day, it wasn't out of passion — it was for fitness.
+        I just wanted to lose a bit of weight, stretch my legs, and maybe feel healthier.
+</p> <p class="mb-4">
+But after a few days, I realized something: walking was boring. Same route. Same trees.
+        Same silence.
+</p> <p>
+I wanted something to keep my mind engaged — something that made me actually look
+        forward to those walks.
+</p> </section> <section class="mb-12"> <h2 class="font-serif text-2xl mb-4">Real Life Pokémon</h2> <p class="mb-4">
+That's when I discovered the Merlin Bird ID app, and without realizing it, I stumbled
+        into the surprisingly fascinating world of birding.
+</p> <p class="mb-4">
+Every time I identified a bird correctly, it felt like catching a Pokémon — except this
+        time, the creatures were real. They were colorful, alive, and unpredictable.
+</p> <p>
+Birders even have their own version of a Pokédex — a life list — a record of every
+        species you've seen for the first time in your life.
+</p> </section> <section class="mb-12"> <h2 class="font-serif text-2xl mb-4">Learning From Others</h2> <p class="mb-4">
+After a few weeks of solo spotting, I happened to meet a fellow birder — an ornithologist
+        — at the same lake I usually walked by.
+</p> <p class="mb-4">
+He introduced me to eBird, a global platform where birders log sightings, track
+        observations, and even plan trips based on recent activity.
+</p> <p>
+Birding suddenly felt less like a solo activity and more like joining a living, constantly
+        updating system built by people across the world.
+</p> </section> <section class="mb-12"> <h2 class="font-serif text-2xl mb-4">Seeing More</h2> <p class="mb-4">
+Getting my first binoculars was like switching from 480p to HD. Birds that once looked
+        like dots suddenly revealed patterns, colors, and detail.
+</p> <p>
+I wasn't just walking anymore — I was actively looking, listening, and noticing what
+        had always been there.
+</p> </section> <section> <h2 class="font-serif text-2xl mb-4">Why It Stuck</h2> <p class="mb-4">
+Birding made me more observant, more patient, and more aware of the environment around me.
+</p> <p class="mb-4">
+It doesn't require expensive gear or constant attention — just curiosity and a willingness
+        to look up.
+</p> <p>
+If you're bored of your daily routine or tired of screens, try birding. You might go out
+        for a walk, but you'll come back seeing the world differently.
+</p> </section>  </div> <!-- Bottom navigation --> <div class="pt-8 border-t border-border flex items-center justify-between text-sm"> <a href="/blogs" class="link-underline text-text-secondary hover:text-text transition-colors">
+&larr; All posts
+</a> <a href="/" class="link-underline text-text-tertiary hover:text-text transition-colors">
+Home
+</a> </div> </article>  </main> <footer class="py-10 border-t border-border"> <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-sm text-text-tertiary"> <!-- Social links --> <div class="flex gap-5"> <a href="https://github.com/deep0ctave" target="_blank" rel="noopener noreferrer" class="hover:text-text transition-colors">
+GitHub
+</a> <a href="https://www.linkedin.com/in/avinash-aldhapati/" target="_blank" rel="noopener noreferrer" class="hover:text-text transition-colors">
+LinkedIn
+</a> </div> <!-- Copyright --> <p>&copy; 2026 Avinash Aldhapati</p> </div> </footer> </div> </body></html>

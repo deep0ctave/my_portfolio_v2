@@ -1,0 +1,48 @@
+<!DOCTYPE html><html lang="en" class="scroll-smooth"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><!-- Fonts — Inter (body) + Playfair Display (headings) --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"><!-- Dark mode: apply .dark before first paint to prevent flash --><script>
+      const theme = localStorage.getItem('theme');
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+    </script><title>About — Avinash Aldhapati</title><meta name="description" content="Learn about Avinash Aldhapati — software engineer with a background in electronics, computational systems, and creative technology."><meta name="author" content="Avinash Aldhapati"><!-- Open Graph --><meta property="og:title" content="About — Avinash Aldhapati"><meta property="og:description" content="Learn about Avinash Aldhapati — software engineer with a background in electronics, computational systems, and creative technology."><meta property="og:type" content="website"><meta property="og:url" content="https://avinashaldhapati.com/aboutme"><!-- Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-MCC0FWPRBG"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MCC0FWPRBG');
+    </script><link rel="stylesheet" href="/_astro/aboutme.Dlif4kv5.css"></head> <body class="min-h-screen flex flex-col"> <!--
+      The entire page lives inside a centered column.
+      max-w-3xl (~48rem / 768px) keeps line lengths readable.
+      Wider sections (like project grids) can break out with their own wrappers.
+    --> <div class="mx-auto w-full max-w-3xl px-6 md:px-8 flex flex-col min-h-screen"> <header class="pt-10 pb-8 md:pt-14 md:pb-10"> <nav class="flex flex-col sm:flex-row justify-between items-start sm:items-baseline gap-4"> <!-- Site name — links to home --> <a href="/" class="font-serif text-2xl md:text-3xl tracking-tight text-text hover:opacity-70 transition-opacity">
+Avinash Aldhapati
+</a> <!-- Right side: nav links + separated toggle --> <div class="flex items-baseline gap-5"> <!-- Navigation links --> <ul class="flex items-baseline gap-6 text-sm text-text-secondary"> <li> <a href="/work" class="link-underline transition-colors hover:text-text">
+work
+</a> </li> <li> <a href="/projects" class="link-underline transition-colors hover:text-text">
+projects
+</a> </li> <li> <a href="/blogs" class="link-underline transition-colors hover:text-text">
+writing
+</a> </li> <li> <a href="/aboutme" class="link-underline transition-colors hover:text-text text-text after:w-full">
+about
+</a> </li> <li> <a href="/contact" class="link-underline transition-colors hover:text-text">
+contact
+</a> </li> </ul> <!-- Vertical separator + dark mode toggle --> <span class="hidden sm:block w-px h-4 bg-border"></span> <button id="theme-toggle" class="text-text-tertiary hover:text-text transition-colors cursor-pointer leading-none" aria-label="Toggle dark mode"> <svg id="theme-icon-sun" class="hidden w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"> <circle cx="12" cy="12" r="5"></circle> <line x1="12" y1="1" x2="12" y2="3"></line> <line x1="12" y1="21" x2="12" y2="23"></line> <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line> <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line> <line x1="1" y1="12" x2="3" y2="12"></line> <line x1="21" y1="12" x2="23" y2="12"></line> <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line> <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line> </svg> <svg id="theme-icon-moon" class="hidden w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"> <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path> </svg> </button> </div> </nav> </header> <!-- Dark mode toggle script --> <script type="module">function o(){const e=document.documentElement.classList.contains("dark"),t=document.getElementById("theme-icon-sun"),n=document.getElementById("theme-icon-moon");t&&n&&(t.classList.toggle("hidden",!e),n.classList.toggle("hidden",e))}o();document.getElementById("theme-toggle")?.addEventListener("click",()=>{const e=document.documentElement.classList.toggle("dark");localStorage.setItem("theme",e?"dark":"light"),o()});</script> <main class="flex-grow py-16 md:py-24">  <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl tracking-tight mb-16">About</h1>  <section class="mb-20 max-w-2xl"> <div class="text-text-secondary leading-relaxed space-y-5"> <p>
+Software engineer with a background in Electronics and Communication Engineering,
+        focused on computational systems, numerical methods, and human–machine interfaces.
+</p> <p>
+My work spans physics-based simulations, alternative numeric representations (Posit arithmetic),
+        FPGA-accelerated algorithms, and full-stack web platforms. I enjoy building systems that
+        balance theoretical rigor with practical usability.
+</p> <p>
+Alongside engineering, I explore creative tooling, visual analysis, and 3D systems —
+        using these to think about interfaces, perception, and interaction beyond traditional
+        software boundaries.
+</p> <p>
+Currently focused on DevOps tooling, ML internals, and expanding CineChroma with
+        multi-film comparison and HTML report generation.
+</p> <p class="text-text-tertiary">
+More about my professional experience at
+<a href="/work" class="link-underline text-text-secondary hover:text-text transition-colors">/work</a>.
+</p> </div> </section>  <section class="mb-20"> <h2 class="text-xs uppercase tracking-widest text-text-tertiary mb-8">Skills</h2> <div class="grid grid-cols-1 sm:grid-cols-3 gap-10 text-sm"> <div> <h3 class="font-medium mb-3">Languages</h3> <ul class="text-text-secondary space-y-1.5"> <li>Python</li> <li>C++</li> <li>JavaScript</li> <li>HTML / CSS</li> </ul> </div> <div> <h3 class="font-medium mb-3">Frameworks</h3> <ul class="text-text-secondary space-y-1.5"> <li>React</li> <li>Node.js / Express</li> <li>PostgreSQL</li> </ul> </div> <div> <h3 class="font-medium mb-3">Tools</h3> <div class="flex flex-wrap gap-2"> <span class="text-xs border border-border px-2 py-1 rounded text-text-secondary">Git</span> <span class="text-xs border border-border px-2 py-1 rounded text-text-secondary">Bash</span> <span class="text-xs border border-border px-2 py-1 rounded text-text-secondary">AWS</span> <span class="text-xs border border-border px-2 py-1 rounded text-text-secondary">Azure</span> <span class="text-xs border border-border px-2 py-1 rounded text-text-secondary">Terraform</span> <span class="text-xs border border-border px-2 py-1 rounded text-text-secondary">Three.js</span> </div> </div> </div> </section>  <section> <h2 class="text-xs uppercase tracking-widest text-text-tertiary mb-8">Education</h2> <div class="space-y-8 text-sm"> <div> <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-1"> <h3 class="font-medium">B.Tech — Electronics & Communication Engineering</h3> <span class="text-text-tertiary">2019 — 2023</span> </div> <p class="text-text-secondary">PES University, Bangalore</p> </div> <div class="hairline"></div> <div> <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-1"> <h3 class="font-medium">Pre-University (State Board)</h3> <span class="text-text-tertiary">2017 — 2019</span> </div> <p class="text-text-secondary">Chethana PU College</p> </div> <div class="hairline"></div> <div> <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-1"> <h3 class="font-medium">ICSE</h3> <span class="text-text-tertiary">2006 — 2017</span> </div> <p class="text-text-secondary">Ryan International School</p> </div> </div> </section>  </main> <footer class="py-10 border-t border-border"> <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-sm text-text-tertiary"> <!-- Social links --> <div class="flex gap-5"> <a href="https://github.com/deep0ctave" target="_blank" rel="noopener noreferrer" class="hover:text-text transition-colors">
+GitHub
+</a> <a href="https://www.linkedin.com/in/avinash-aldhapati/" target="_blank" rel="noopener noreferrer" class="hover:text-text transition-colors">
+LinkedIn
+</a> </div> <!-- Copyright --> <p>&copy; 2026 Avinash Aldhapati</p> </div> </footer> </div> </body></html>

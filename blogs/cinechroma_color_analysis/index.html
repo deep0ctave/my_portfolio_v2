@@ -1,0 +1,69 @@
+<!DOCTYPE html><html lang="en" class="scroll-smooth"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><!-- Fonts — Inter (body) + Playfair Display (headings) --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"><!-- Dark mode: apply .dark before first paint to prevent flash --><script>
+      const theme = localStorage.getItem('theme');
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+    </script><title>CineChroma Devlog 01 — Avinash Aldhapati</title><meta name="description" content="What CineChroma does, why I built it, and what I learned about color clustering and frame sampling."><meta name="author" content="Avinash Aldhapati"><!-- Open Graph --><meta property="og:title" content="CineChroma Devlog 01 — Avinash Aldhapati"><meta property="og:description" content="What CineChroma does, why I built it, and what I learned about color clustering and frame sampling."><meta property="og:type" content="website"><meta property="og:url" content="https://avinashaldhapati.com/blogs/cinechroma_color_analysis"><!-- Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-MCC0FWPRBG"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MCC0FWPRBG');
+    </script><link rel="stylesheet" href="/_astro/aboutme.Dlif4kv5.css"></head> <body class="min-h-screen flex flex-col"> <!--
+      The entire page lives inside a centered column.
+      max-w-3xl (~48rem / 768px) keeps line lengths readable.
+      Wider sections (like project grids) can break out with their own wrappers.
+    --> <div class="mx-auto w-full max-w-3xl px-6 md:px-8 flex flex-col min-h-screen"> <header class="pt-10 pb-8 md:pt-14 md:pb-10"> <nav class="flex flex-col sm:flex-row justify-between items-start sm:items-baseline gap-4"> <!-- Site name — links to home --> <a href="/" class="font-serif text-2xl md:text-3xl tracking-tight text-text hover:opacity-70 transition-opacity">
+Avinash Aldhapati
+</a> <!-- Right side: nav links + separated toggle --> <div class="flex items-baseline gap-5"> <!-- Navigation links --> <ul class="flex items-baseline gap-6 text-sm text-text-secondary"> <li> <a href="/work" class="link-underline transition-colors hover:text-text">
+work
+</a> </li> <li> <a href="/projects" class="link-underline transition-colors hover:text-text">
+projects
+</a> </li> <li> <a href="/blogs" class="link-underline transition-colors hover:text-text text-text after:w-full">
+writing
+</a> </li> <li> <a href="/aboutme" class="link-underline transition-colors hover:text-text">
+about
+</a> </li> <li> <a href="/contact" class="link-underline transition-colors hover:text-text">
+contact
+</a> </li> </ul> <!-- Vertical separator + dark mode toggle --> <span class="hidden sm:block w-px h-4 bg-border"></span> <button id="theme-toggle" class="text-text-tertiary hover:text-text transition-colors cursor-pointer leading-none" aria-label="Toggle dark mode"> <svg id="theme-icon-sun" class="hidden w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"> <circle cx="12" cy="12" r="5"></circle> <line x1="12" y1="1" x2="12" y2="3"></line> <line x1="12" y1="21" x2="12" y2="23"></line> <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line> <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line> <line x1="1" y1="12" x2="3" y2="12"></line> <line x1="21" y1="12" x2="23" y2="12"></line> <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line> <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line> </svg> <svg id="theme-icon-moon" class="hidden w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"> <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path> </svg> </button> </div> </nav> </header> <!-- Dark mode toggle script --> <script type="module">function o(){const e=document.documentElement.classList.contains("dark"),t=document.getElementById("theme-icon-sun"),n=document.getElementById("theme-icon-moon");t&&n&&(t.classList.toggle("hidden",!e),n.classList.toggle("hidden",e))}o();document.getElementById("theme-toggle")?.addEventListener("click",()=>{const e=document.documentElement.classList.toggle("dark");localStorage.setItem("theme",e?"dark":"light"),o()});</script> <main class="flex-grow py-16 md:py-24">  <article> <!-- Breadcrumb --> <nav class="text-sm text-text-tertiary mb-12" aria-label="Breadcrumb"> <a href="/" class="hover:text-text transition-colors">Home</a> <span class="mx-2">/</span> <a href="/blogs" class="hover:text-text transition-colors">Writing</a> <span class="mx-2">/</span> <span class="text-text-secondary">CineChroma Devlog 01</span> </nav> <!-- Title --> <header class="mb-12"> <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight mb-4"> CineChroma Devlog 01 </h1> <!-- Meta row --> <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-text-tertiary"> <span>April 8, 2026</span> <span>Avinash Aldhapati</span> <div class="flex gap-2"> <span class="text-xs border border-border px-2 py-0.5 rounded-full">Technical</span><span class="text-xs border border-border px-2 py-0.5 rounded-full">Python</span><span class="text-xs border border-border px-2 py-0.5 rounded-full">Film</span> </div> </div> </header> <!-- Abstract --> <div class="border-l-2 border-text pl-6 mb-16 text-text-secondary leading-relaxed max-w-2xl"> What CineChroma does, why I built it, and one concrete thing I learned about color clustering and frame sampling along the way. </div> <!-- Content — the <slot /> receives the page-specific markup --> <div class="prose max-w-none mb-20 text-text-secondary leading-relaxed space-y-6">  <section class="mb-12"> <h2 class="font-serif text-2xl mb-4">The Problem</h2> <p class="mb-4">
+I watch a lot of films. At some point I became interested not just in the story but in the
+        visual grammar — the color palettes directors and DPs commit to across an entire runtime.
+        Films like <em>Drive</em>, <em>Her</em>, and <em>Blade Runner 2049</em> have color identities
+        you can feel before you consciously register them.
+</p> <p class="mb-4">
+I wanted to be able to extract and visualize that color identity automatically, for any
+        video file, without manually sampling frames or eyeballing screenshots. That's why I built
+        CineChroma.
+</p> <p>
+The goal was simple on paper: given a video, output its dominant color palette. In practice,
+        a few decisions made all the difference.
+</p> </section> <section class="mb-12"> <h2 class="font-serif text-2xl mb-4">How It Works</h2> <p class="mb-4">The pipeline has three stages:</p> <ol class="list-decimal list-inside space-y-3 text-text-secondary"> <li> <strong class="text-text">Frame extraction</strong> — FFmpeg samples one frame every N seconds.
+          For a two-hour film at one frame per 10 seconds, that's ~720 frames.
+</li> <li> <strong class="text-text">Color clustering</strong> — Each frame is resized to a thumbnail and
+          flattened into RGB pixels. All pixels are fed into k-means, clustering into k dominant colors.
+</li> <li> <strong class="text-text">Output</strong> — The cluster centroids become the palette. Currently
+          rendered as a PNG swatch and printed as hex codes.
+</li> </ol> </section> <section class="mb-12"> <h2 class="font-serif text-2xl mb-4">The Interesting Part</h2> <p class="mb-4">
+The thing I didn't expect: <strong>frame sampling strategy matters more than k-means tuning.</strong> </p> <p class="mb-4">
+Early on I sampled uniformly — one frame every N seconds, evenly spaced. The palettes came
+        out dominated by whatever the film spent the most runtime on: long dialogue scenes, neutral
+        rooms, a single location.
+</p> <p class="mb-4">
+A better approach was to also sample around high-motion frames — moments where the image
+        changes significantly from the previous frame, which often correspond to cuts, action, and
+        cinematographically intentional moments. The palettes became noticeably richer.
+</p> <p>
+It's a small thing, but it shifted my thinking: the algorithm was never the bottleneck.
+        The data selection was.
+</p> </section> <section> <h2 class="font-serif text-2xl mb-4">What's Next</h2> <p class="mb-4">Two things I want to build next:</p> <ul class="list-disc list-inside space-y-2 text-text-secondary"> <li> <strong class="text-text">Multi-film comparison</strong> — run CineChroma on several films and
+          compare their palettes side by side.
+</li> <li> <strong class="text-text">HTML report generation</strong> — a self-contained HTML file with
+          palette swatches, hex codes, and sample frames.
+</li> </ul> </section>  </div> <!-- Bottom navigation --> <div class="pt-8 border-t border-border flex items-center justify-between text-sm"> <a href="/blogs" class="link-underline text-text-secondary hover:text-text transition-colors">
+&larr; All posts
+</a> <a href="/" class="link-underline text-text-tertiary hover:text-text transition-colors">
+Home
+</a> </div> </article>  </main> <footer class="py-10 border-t border-border"> <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-sm text-text-tertiary"> <!-- Social links --> <div class="flex gap-5"> <a href="https://github.com/deep0ctave" target="_blank" rel="noopener noreferrer" class="hover:text-text transition-colors">
+GitHub
+</a> <a href="https://www.linkedin.com/in/avinash-aldhapati/" target="_blank" rel="noopener noreferrer" class="hover:text-text transition-colors">
+LinkedIn
+</a> </div> <!-- Copyright --> <p>&copy; 2026 Avinash Aldhapati</p> </div> </footer> </div> </body></html>
